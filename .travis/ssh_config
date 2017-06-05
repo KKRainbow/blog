@@ -1,4 +1,9 @@
 Host github.com
-User git
-StrictHostKeyChecking no
-IdentitiesOnly yes
+	User git
+	StrictHostKeyChecking no
+	IdentitiesOnly yes
+
+Host git.coding.net
+	User git
+	StrictHostKeyChecking no
+	IdentitiesOnly yes
