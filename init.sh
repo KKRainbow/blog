@@ -1,3 +1,5 @@
 #!/bin/bash
 git submodule update --init --recursive
-ln -srf ./_theme_config.yml ./themes/next/_config.yml
+cd ./themes-customs
+find . -type f -exec ln -srf {} ../themes/next/{} \;
+cd -
