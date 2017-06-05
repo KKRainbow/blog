@@ -22,7 +22,7 @@ cache:
     - node_modules
 
 script:
-- ./init.sh
+- TRAVIS=1 ./init.sh
 - hexo clean
 - hexo deploy -g
 
