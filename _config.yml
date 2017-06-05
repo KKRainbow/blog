@@ -68,4 +68,7 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo:
+        github: git@github.com:KKRainbow/KKRainbow.github.io.git
+        coding: git@git.coding.net:rainstyle/rainstyle.coding.me.git
