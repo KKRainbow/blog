@@ -8,6 +8,7 @@ categories:
 	- 配置文件
 ---
 采用Vundle对插件进行管理。
+<!-- more -->
 ```vim
 set nu
 syntax on

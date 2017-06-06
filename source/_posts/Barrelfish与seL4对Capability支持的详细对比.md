@@ -10,7 +10,6 @@ categories:
 date: 2017-06-06 16:40:23
 ---
 
-
 # 概述
 
 Barrelfish采用Capability机制对系统资源进行管理，该机制源自seL4。
@@ -18,6 +17,8 @@ Barrelfish采用Capability机制对系统资源进行管理，该机制源自seL
 Capability可以看做是访问系统中各种资源的令牌。内存空间、IO端口、进程控制块（PCB），中断号，进程通信的信道等，都可以通过Capability来管理。
 
 内核通常会在内核空间维护每个进程所持有的Capability的详细数据，而用户进程持有Capability的引用。当用户程序访问系统资源时，需要使用该资源对应的Capability的引用调用系统调用，内核检查该引用的合法性后，才会允许用户对该资源进行操作。
+
+<!-- more -->
 
 ## Capability的类型
 Capability的类型通常与资源一一对应。
@@ -86,9 +87,12 @@ _ 关键字：Capability类型 Capability关系数据库 _
 类型的转换并不会导致一个Capability的删除，内核会维护新产生的Capability与源Capability间继承的关系(Capability Derivation Tree)，若用户空间重复对一个的Capability进行类型转换操作，那么内核会拒绝该操作；若进程请求删除的一个Capability有子节点，那么内核也会同时删除子节点。
 基于Capability的内核利用Capability的类型转换来实现普通操作系统提供的系统调用。
 比如，若用户空间的程序需要申请一个IRQ号，那么它需要持有IRQTable_Cap（表明具有操作内核中IRQ转发表的权限），然后使用类似于如下的系统调用。
+
 ```plain
+
 An_IRQSrc_Cap_Ref = cap_retype(An_IRQTable_Cap_Ref, irq_num_from, irq_num_to, irq_handler_pointer);
 ```
+
 操作系统会进行如下几步操作。
 1. 验证程序提供的Capability Reference是否正确。
 2. 在用户进程的PCB中新建一个IRQSrc类型的Capability，并根据参数填写内核中的IRQ转发表。
