@@ -42,11 +42,11 @@ $(document).ready(function () {
 						'right: 3%;'                                                                     +
 						'margin-top: 5px;'                                                               +
 						'font-family: consolas, Menlo, \'PingFang SC\', \'Microsoft YaHei\', monospace;' +
-						'font-size: 10px;'                                                                +
+						'font-size: 10px;'                                                               +
 						'cursor: pointer;'                                                               +
 						'color: #e31436;'                                                                +
 						'">'                                                                             +
-			'<span>全选</span>'                                                                            +
+			'<span>全选</span>'                                                                          +
 			'</div>';
 		var button = $(button_html);
 
