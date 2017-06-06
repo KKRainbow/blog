@@ -12,6 +12,9 @@ Hexo生成的博客中，代码片段是不支持选择全部功能的，若代�
 添加的方法如下。
 在页面模板文件（对于Next主题，模板文件为themes/next/layout/_layout.swig）的&lt;head&gt;节点中添加如下代码。
 
+<!-- more -->
+
+
 ```javascript
 $(document).ready(function () {
 	var SelectText = function(element) {
