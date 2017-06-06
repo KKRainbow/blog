@@ -21,6 +21,7 @@ Capability可以看做是访问系统中各种资源的令牌。内存空间、I
 ## Capability的类型
 Capability的类型通常与资源一一对应。
 - 对于内存区域，内核中的Capability可以表示如下。
+
 ```c
 struct PhysAddr_Cap {
 	enum objtype_t type = PHYS_ADDR;
