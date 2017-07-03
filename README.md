@@ -1,4 +1,5 @@
 # 博客源码
+[![Build Status](https://www.travis-ci.org/KKRainbow/blog.svg?branch=master)](https://www.travis-ci.org/KKRainbow/blog)
 - 网址：
   https://sunsijie.top
 - 邮箱：
