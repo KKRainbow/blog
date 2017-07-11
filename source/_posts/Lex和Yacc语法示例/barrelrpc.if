@@ -1,0 +1,15 @@
+/*
+fkdlsajlkfjldska
+fdlksajlkfsdjla
+flkdsjalkfdsj
+typedef struct {
+		int32 a;
+		int32 b;
+		int8 c;
+	} mystruct;
+, out mystruct st
+*/
+interface barrelrpc "Example rpc interface" {
+
+	rpc myrpc(in int32 qqq, out String s[2048]);
+};
