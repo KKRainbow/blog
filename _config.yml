@@ -68,17 +68,17 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+#deploy:
+  #type: rsync
+  #user: sunsijie
+  #root: files
+  #host: 127.0.0.1
+  #port: 12000
+  #delete: true
+  #verbose: true
+  #ignore_errors: false
 deploy:
-  type: rsync
-  user: sunsijie
-  root: files
-  host: 127.0.0.1
-  port: 12000
-  delete: true
-  verbose: true
-  ignore_errors: false
-
-#  type: git
-#  repo:
-#        github: git@github.com:KKRainbow/KKRainbow.github.io.git
-#        coding: git@git.coding.net:rainstyle/rainstyle.coding.me.git
+  type: git
+  repo:
+        github: git@github.com:KKRainbow/KKRainbow.github.io.git
+        coding: git@git.coding.net:rainstyle/rainstyle.coding.me.git
